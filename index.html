@@ -35,12 +35,13 @@
                 container: {
                     center: true,
                     padding: {
-                        DEFAULT: '1.5rem',
-                        md: '2rem',
-                        lg: '4rem',
-                        xl: '5rem',
-                        '2xl': '6rem'
-                    }
+                        DEFAULT: '1rem',
+                        // sm: '1rem',
+                        // md: '1.5rem',
+                        // lg: '0',
+                        // xl: '5rem',
+                        // '2xl': '6rem',
+                    },
                 }
             }
         }
@@ -59,7 +60,7 @@
             @apply text-[40px];
           }
           h3 {
-            @apply text-4xl;
+            @apply text-3xl lg:text-4xl;
           } 
           h4{
             @apply text-[32px]
@@ -77,14 +78,48 @@
 </head>
 
 <body>
-    <header class="max-w-[1440px] container">
-
+    <header class="max-w-[1440px] container mt-5">
+        <!-- Navigation Section -->
+        <nav>
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 *:text-lg *:text-dark-gray *:font-medium *:font-raleway">
+                            <li><a>Home</a></li>
+                            <li><a>About</a></li>
+                            <li><a>Destination</a></li>
+                            <li><a>Search</a></li>
+                        </ul>
+                    </div>
+                    <h3 class="font-extrabold">P-Ticket</h3>
+                    <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                    <ul class="menu menu-horizontal px-1 *:text-lg *:text-dark-gray *:font-medium *:font-raleway">
+                        <li><a>Home</a></li>
+                        <li><a>About</a></li>
+                        <li><a>Destination</a></li>
+                        <li><a>Search</a></li>
+                    </ul>
+                </div>
+                <div class="navbar-end">
+                    <a
+                        class="btn text-base md:text-lg font-bold font-raleway text-primary bg-[#1dd1001a] hover:bg-[#1dd1001a] border border-[#1dd10066]">Bus
+                        <img src="./images/bus-icon.png" alt="" class="size-5 md:size-6"></a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
-        <!-- <h1 class="text-3xl font-raleway font-black">Hello World</h1>
-        <h1 class="text-3xl  font-inter font-black">Hello World</h1>
-        <h2>hello</h2>
-        <button class="btn btn-primary">bnt</button> -->
+
     </main>
     <footer></footer>
 </body>
