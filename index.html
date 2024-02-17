@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Ticketing</title>
+    <link rel="shortcut icon" href="./images/bus-icon.png" type="image/x-icon">
+    <!-- Google Font Inter & Raleway CDN-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- Tailwind and DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // workSans: "'workSans', sans-serif"
+                        raleway: "'Raleway', sans-serif",
+                        inter: "'Inter', sans-serif",
+                    },
+                    colors: {
+                        primary: '#1DD100',
+                        secondary: '#030712',
+                        'light-gray': '#03071299',
+                        'dark-gray': '#030712cc',
+                    }
+                },
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1.5rem',
+                        md: '2rem',
+                        lg: '4rem',
+                        xl: '5rem',
+                        '2xl': '6rem'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Tailwind CSS Customization -->
+    <style type="text/tailwindcss">
+        @layer base {
+            h1,h2,h3,h4,h5{
+                @apply font-raleway font-bold text-secondary
+            }
+            h1{
+                @apply text-[64px] font-extrabold leading-snug
+            }
+
+          h2 {
+            @apply text-[40px];
+          }
+          h3 {
+            @apply text-4xl;
+          } 
+          h4{
+            @apply text-[32px]
+          }
+          h5{
+            @apply text-2xl
+          }
+        }
+        @layer components {
+          .btn-primary {
+            @apply bg-primary border-primary hover:bg-primary hover:border-primary text-white capitalize text-base font-bold;
+          }
+        }
+      </style>
+</head>
+
+<body>
+    <header class="max-w-[1440px] container">
+
+    </header>
+    <main>
+        <!-- <h1 class="text-3xl font-raleway font-black">Hello World</h1>
+        <h1 class="text-3xl  font-inter font-black">Hello World</h1>
+        <h2>hello</h2>
+        <button class="btn btn-primary">bnt</button> -->
+    </main>
+    <footer></footer>
+</body>
+
+</html>
