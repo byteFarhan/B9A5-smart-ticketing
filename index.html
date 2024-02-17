@@ -53,11 +53,11 @@
                 @apply font-raleway font-bold text-secondary
             }
             h1{
-                @apply text-[64px] font-extrabold leading-snug
+                @apply text-3xl md:text-5xl lg:text-[64px] font-bold md:font-extrabold leading-snug
             }
 
           h2 {
-            @apply text-[40px];
+            @apply text-2xl md:text-3xl lg:text-[40px];
           }
           h3 {
             @apply text-3xl lg:text-4xl;
@@ -99,8 +99,9 @@
                             <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <h3 class="font-extrabold">P-Ticket</h3>
-                    <!-- <a class="btn btn-ghost text-xl">daisyUI</a> -->
+                    <a href="#">
+                        <h3 class="font-extrabold">E-Ticket</h3>
+                    </a>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 *:text-lg *:text-dark-gray *:font-medium *:font-raleway">
@@ -117,6 +118,21 @@
                 </div>
             </div>
         </nav>
+        <!-- Banner Section -->
+        <section id="banner"
+            class="bg-[url('./images/banner.png'),_linear-gradient(180deg,_#121212,_transparent)] bg-cover bg-center bg-no-repeat mt-5 mb-32 py-10 px-3 md:px-5 lg:px-0 md:py-28 lg:py-36 rounded-3xl flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center">
+            <h1 class="text-white text-center">End-to-End Travel with</h1>
+            <h1 class="text-primary text-center">Green Line Paribahan</h1>
+
+            <p class="text-base lg:text-xl text-white font-inter leading-8 w-full lg:w-1/2 mx-auto text-center">Yes, you
+                can run unit tests and
+                view the
+                results directly
+                within the app. The integrated testing features
+                allow for a streamlined .</p>
+            <button class="btn btn-primary text-secondary ">Buy Tickets</button>
+            <!-- <img src="./images/banner.png" alt=""> -->
+        </section>
     </header>
     <main>
 
