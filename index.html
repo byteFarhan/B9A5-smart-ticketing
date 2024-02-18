@@ -78,7 +78,7 @@
 </head>
 
 <body>
-    <header class="max-w-[1440px] container mt-5">
+    <header class="max-w-[1170px] container mt-5">
         <!-- Navigation Section -->
         <nav>
             <div class="navbar bg-base-100">
@@ -120,11 +120,11 @@
         </nav>
         <!-- Banner Section -->
         <section id="banner"
-            class="bg-[url('./images/banner.png'),_linear-gradient(180deg,_#121212,_transparent)] bg-cover bg-center bg-no-repeat mt-5 mb-32 py-10 px-3 md:px-5 lg:px-0 md:py-28 lg:py-36 rounded-3xl flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center">
+            class="bg-[url('./images/banner.png'),_linear-gradient(180deg,_#121212,_transparent)] bg-cover bg-center md:bg-bottom bg-no-repeat mt-5 mb-32 py-10 px-3 md:px-5 lg:px-0 md:py-28 lg:pt-20 lg:pb-40 rounded-3xl flex flex-col gap-4 md:gap-6 lg:gap-8 justify-center items-center">
             <h1 class="text-white text-center">End-to-End Travel with</h1>
             <h1 class="text-primary text-center">Green Line Paribahan</h1>
 
-            <p class="text-base lg:text-xl text-white font-inter leading-8 w-full lg:w-1/2 mx-auto text-center">Yes, you
+            <p class="text-base lg:text-xl text-white font-inter leading-8 w-full lg:w-2/3 mx-auto text-center">Yes, you
                 can run unit tests and
                 view the
                 results directly
@@ -134,21 +134,21 @@
             <!-- <img src="./images/banner.png" alt=""> -->
         </section>
     </header>
-    <main class="max-w-[1440px] container">
+    <main class="max-w-[1170px] container">
         <!-- Best offers for you Section -->
         <section id="best-offers">
             <h2 class="text-center my-12">Best offers for you</h2>
             <div class="flex flex-col lg:flex-row gap-6">
-                <div class="flex-1 bg-[#FFBF0F] flex gap-6 rounded-xl">
-                    <div class="basis-2/4 flex justify-center items-center">
+                <div class="flex-1 bg-[#FFBF0F] flex gap-6 rounded-xl px-4 md:px-0">
+                    <div class="flex-1 md:flex-none md:basis-2/4 flex justify-center items-center">
                         <div class="">
                             <h2 class="font-inter font-black">15% OFF</h2>
                             <p class="text-xl font-semibold text-secondary font-inter">on your next purchase</p>
                             <p class="text-xl font-medium font-inter text-primary">use by January 2024</p>
                         </div>
                     </div>
-                    <img src="./images/cupon-devider.png" alt="" class="max-w-full">
-                    <div class="flex flex-col justify-center items-center">
+                    <img src="./images/cupon-devider.png" alt="" class="max-w-full" draggable="false">
+                    <div class="flex-1 md:flex-none flex flex-col justify-center items-center">
                         <div>
                             <h4>NEW15</h4>
                             <p class="text-primary font-medium font-raleway">Coupon Code</p>
@@ -156,26 +156,35 @@
 
                     </div>
                 </div>
-                <div class="flex-1 bg-[#F78C9C] flex gap-6 rounded-xl">
-                    <div class="basis-2/4 flex justify-center items-center">
+                <div class="flex-1 bg-[#F78C9C] flex gap-6 rounded-xl px-4 md:px-0">
+                    <div class="flex-1 md:flex-none md:basis-2/4 flex justify-center items-center">
                         <div class="">
                             <h2 class="font-inter font-black">20% OFF</h2>
                             <p class="text-xl font-semibold text-secondary font-inter">on your next purchase</p>
                             <p class="text-xl font-medium font-inter text-primary">use by January 2024</p>
                         </div>
                     </div>
-                    <img src="./images/cupon-devider.png" alt="" class="max-w-full">
-                    <div class="flex flex-col justify-center items-center">
+                    <img src="./images/cupon-devider.png" alt="" class="max-w-full" draggable="false">
+                    <div class="flex-1 md:flex-none flex flex-col justify-center items-center">
                         <div>
-                            <h4>Couple 20</h4>
+                            <h4 class="">Couple 20</h4>
                             <p class="text-primary font-medium font-raleway">Coupon Code</p>
                         </div>
-
                     </div>
                 </div>
             </div>
-        </section>
+            <div class="flex justify-center">
+                <button
+                    class="btn btn-outline border-2 border-primary hover:border-primary hover:bg-transparent text-primary hover:text-primary my-14 w-40">See
+                    All
+                    Offers</button>
+            </div>
 
+        </section>
+        <!-- Ticket Section -->
+        <section id="ticket">
+
+        </section>
     </main>
     <footer class="mb-20"></footer>
 </body>
