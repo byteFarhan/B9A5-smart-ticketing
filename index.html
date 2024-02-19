@@ -30,6 +30,8 @@
                         secondary: '#030712',
                         'light-gray': '#03071299',
                         'dark-gray': '#030712cc',
+                        'border-gray-light': '#03071233',
+                        'border-gray-dark': '#0307124d',
                     }
                 },
                 container: {
@@ -198,6 +200,7 @@
                         integrated testing
                         features allow for a streamlined .</p>
                 </div>
+                <!-- /////////////////////////// -->
                 <div class="bg-white rounded-xl mt-12 flex flex-col lg:flex-row gap-3 lg:gap-6">
                     <div class="basis-2/3 p-8 pb-0 lg:pb-8">
                         <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0">
@@ -216,11 +219,11 @@
                             </div>
                         </div>
                         <div class="bg-[#F7F8F8] rounded-lg p-8 my-6">
-                            <div class="pb-6 border-b-2 border-dashed border-lgiht-gray flex justify-between">
+                            <div class="pb-6 border-b-2 border-dashed border-border-gray-light flex justify-between">
                                 <p class="text-lg font-semibold font-raleway text-light-gray">Route</p>
                                 <p class="text-lg font-semibold font-raleway text-secondary">Dhaka - Sylhet</p>
                             </div>
-                            <div class="py-6 border-b-2 border-dashed border-lgiht-gray flex justify-between">
+                            <div class="py-6 border-b-2 border-dashed border-border-gray-light flex justify-between">
                                 <p class="text-lg font-semibold font-raleway text-light-gray">Departure Time</p>
                                 <p class="text-lg font-semibold font-raleway text-secondary">9:00 PM</p>
                             </div>
@@ -252,16 +255,199 @@
                         <div class="text-center space-y-3">
                             <img src="./images/fare.png" alt="" draggable="false" class="size-12 mx-auto object-cover">
                             <h3 class="">550 Taka</h3>
-                            <p class="text-2xl font-semibold font-raleway text-light-gray">Per Seat</p>
+                            <p class="text-2xl font-semibold font-raleway border-border-gray-light">Per Seat</p>
                         </div>
                     </div>
 
+                </div>
+                <!-- ////////////////////////////////////// -->
+                <div class="grid grid-cols-5 bg-white rounded-xl gap-5 my-10 p-8">
+                    <!-- Select Your Seat -->
+                    <div class="col-span-3 border-r-2 border-dashed border-border-gray-dark pr-8">
+                        <div class="pb-6">
+                            <h5>Select Your Seat</h5>
+                        </div>
+                        <div
+                            class="flex justify-between *:flex *:items-center *:gap-2 py-5 border-y-2 border-dashed border-border-gray-light">
+                            <span>
+                                <img src="./images/seat-gray.png" alt="" class="size-7 object-cover">
+                                <p class="text-xl font-medium font-inter text-light-gray">Available</p>
+                            </span>
+                            <span>
+                                <img src="./images/seat-green-filled.png" alt="" class="size-7 object-cover">
+                                <p class="text-xl font-medium font-inter text-primary">Selected</p>
+                            </span>
+                        </div>
+                        <!-- <div class="bg-[#F7F8F8] px-8 py-4 rounded-lg max-w-[32px]">
+                            <img src="./images/steering-wheel.svg" alt="" class="size-7 mr-0">
+                        </div> -->
+                        <div class="grid grid-cols-7 gap-12 *:border-2 py-8">
+                            <div
+                                class="col-span-4 grid grid-cols-5 gap-8 *:text-center *:py-4 *:px-8 *:inline-block *:rounded-lg *:font-medium *:text-lg *:text-light-gray">
+                                <!-- <span class="col-auto"></span>
+                                <span class="col-span-2"></span>
+                                <span class="col-span-2"></span> -->
+                                <span class="col-auto">A</span>
+                                <span class="bg-[#F7F8F8] col-span-2">A1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">A2</span>
+                                <span class="col-auto">B</span>
+                                <span class="bg-[#F7F8F8] col-span-2">B1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">B2</span>
+                                <span class="col-auto">C</span>
+                                <span class="bg-[#F7F8F8] col-span-2">C1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">C2</span>
+                                <span class="col-auto">D</span>
+                                <span class="bg-[#F7F8F8] col-span-2">D1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">D2</span>
+                                <span class="col-auto">E</span>
+                                <span class="bg-[#F7F8F8] col-span-2">E1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">E2</span>
+                                <span class="col-auto">F</span>
+                                <span class="bg-[#F7F8F8] col-span-2">F1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">F2</span>
+                                <span class="col-auto">I</span>
+                                <span class="bg-[#F7F8F8] col-span-2">I1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">I2</span>
+                                <span class="col-auto">G</span>
+                                <span class="bg-[#F7F8F8] col-span-2">G1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">G2</span>
+                                <span class="col-auto">H</span>
+                                <span class="bg-[#F7F8F8] col-span-2">H1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">H2</span>
+                                <span class="col-auto">J</span>
+                                <span class="bg-[#F7F8F8] col-span-2">J1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">J2</span>
+                                <!-- <span class="col-auto"></span>
+                                <span class="bg-[#F7F8F8] col-span-2">1</span>
+                                <span class="bg-[#F7F8F8] col-span-2">2</span> -->
+                            </div>
+                            <!-- <div class="col-auto"></div> -->
+                            <div
+                                class="col-span-3 grid grid-cols-2 gap-8 *:text-center *:py-4 *:px-8 *:inline-block *:rounded-lg *:font-medium *:text-lg *:text-light-gray *:bg-[#F7F8F8]">
+                                <!-- <span class="col-span-1 bg-none hidden"></span>
+                                <span class="col-span-1"><img src="./images/steering-wheel.svg" alt=""
+                                        class="size-7 mx-auto"></span> -->
+                                <span class="col-span-1">A3</span>
+                                <span class="col-span-1">A4</span>
+                                <span class="col-span-1">B3</span>
+                                <span class="col-span-1">B4</span>
+                                <span class="col-span-1">C3</span>
+                                <span class="col-span-1">C4</span>
+                                <span class="col-span-1">D3</span>
+                                <span class="col-span-1">D4</span>
+                                <span class="col-span-1">E3</span>
+                                <span class="col-span-1">E4</span>
+                                <span class="col-span-1">F3</span>
+                                <span class="col-span-1">F4</span>
+                                <span class="col-span-1">G3</span>
+                                <span class="col-span-1">G4</span>
+                                <span class="col-span-1">H3</span>
+                                <span class="col-span-1">H4</span>
+                                <span class="col-span-1">I3</span>
+                                <span class="col-span-1">I4</span>
+                                <span class="col-span-1">J3</span>
+                                <span class="col-span-1">J4</span>
+                                <!-- <span class="col-span-1">3</span>
+                                <span class="col-span-1">4</span> -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Complete Your Payment -->
+                    <div class="col-span-2">
+                        <div class="pb-6 border-b-2 border-dashed border-border-gray-light">
+                            <h5>Complete Your Payment</h5>
+                        </div>
+                        <div class="bg-[#F7F8F8] p-8 rounded-lg my-6">
+                            <div
+                                class="font-inter font-medium text-secondary flex justify-between border-b-2 border-dashed border-border-gray-light pb-4">
+                                <p class="">Seat <span id="total-booking"
+                                        class="bg-primary text-white px-3 py-[2px] rounded-3xl text-xs font-bold ">8</span>
+                                </p>
+                                <p>Class</p>
+                                <p>Price</p>
+                            </div>
+                            <!-- display-booking Section -->
+                            <div id="display-booking"
+                                class="space-y-4 py-4font-inter text-light-gray *:flex *:justify-between *:items-center *:text-center *:flex-1 mt-4">
+                                <div class="*:text-center ">
+                                    <p>C2</p>
+                                    <p>Economoy</p>
+                                    <p>550</p>
+                                </div>
+                                <div>
+                                    <p>C2</p>
+                                    <p>Economoy</p>
+                                    <p>550</p>
+                                </div>
+                            </div>
+                            <!-- Payment Calculation section -->
+                            <div>
+                                <div
+                                    class="font-medium font-inter text-secondary flex justify-between border-t-2  border-border-gray-light mt-4 py-4">
+                                    <p>Total Price</p>
+                                    <p>BDT <span id="total-price">1100</span></p>
+                                </div>
+                                <div>
+                                    <form class="max-w-md mx-auto">
+                                        <div class="relative">
+                                            <input type="text" id="coupon-input"
+                                                class="block w-full p-4 text-secondary rounded-lg bg-white focus:border-primary"
+                                                placeholder="Have any copupon?" />
+                                            <button
+                                                class="text-white absolute end-2.5 bottom-2.5 bg-primary focus:outline-none rounded-lg font-semibold text-sm font-inter px-4 py-2">Apply</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="font-medium font-inter text-secondary flex justify-between py-4">
+                                    <p>Grand Total</p>
+                                    <p>BDT <span id="total-price">1100</span></p>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- Gatting Passenger Info Section -->
+                        <div>
+                            <form class="">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="font-semibold font-inter text-secondary">Passenger Name*</span>
+                                    </label>
+                                    <input id="name" type="text" placeholder="Enter your name"
+                                        class="input input-bordered" />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="font-semibold font-inter text-secondary">Phone Number*</span>
+                                    </label>
+                                    <input id="phone" type="number" placeholder="Enter your phone number"
+                                        class="input input-bordered" />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="font-semibold font-inter text-secondary">Email ID</span>
+                                    </label>
+                                    <input id="email" type="email" placeholder="Enter your email id"
+                                        class="input input-bordered" />
+                                </div>
+                                <div class="form-control mt-6">
+                                    <button class="btn btn-primary">Next</button>
+                                </div>
+                            </form>
+                            <div class="flex justify-between *:text-primary font-inter *:underline mt-4">
+                                <p><a href="#">Terms and Conditions</a></p>
+                                <p><a href="#">Cancellation Policy</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </section>
     </main>
-    <footer class="mb-20"></footer>
+    <footer class="mb-20">
+    </footer>
+    <script src="./js/utlity.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
