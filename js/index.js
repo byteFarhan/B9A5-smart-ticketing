@@ -19,52 +19,16 @@ totalBookingElement.innerText = totalBooking;
 const seatsLeftElement = document.getElementById("seats-left");
 seatsLeftElement.innerText = totalSeats - totalBooking;
 
-const seats = [
-  "A1",
-  "A2",
-  "A3",
-  "A4",
-  "B1",
-  "B2",
-  "B3",
-  "B4",
-  "C3",
-  "C4",
-  "D3",
-  "D4",
-  "E3",
-  "E4",
-  "F3",
-  "F4",
-  "G3",
-  "G4",
-  "H3",
-  "H4",
-  "I3",
-  "I4",
-  "J3",
-  "J4",
-  "C1",
-  "C2",
-  "D1",
-  "D2",
-  "E1",
-  "E2",
-  "F1",
-  "F2",
-  "I1",
-  "I2",
-  "G1",
-  "G2",
-  "H1",
-  "H2",
-  "J1",
-  "J2",
-];
+// const seats = ["A1", "A2", "A3", "A4", "B1", "B2", "B3", "B4", "C3", "C4", "D3", "D4", "E3", "E4", "F3", "F4", "G3", "G4", "H3", "H4", "I3", "I4", "J3", "J4", "C1", "C2", "D1", "D2", "E1", "E2", "F1", "F2", "I1", "I2", "G1", "G2", "H1", "H2", "J1", "J2"];
 // console.log(seats.length);
 
-seats.forEach(function (seat) {
-  document.getElementById(seat).addEventListener("click", (event) => {
+const passengerSeats = document.querySelectorAll(".passenger-seat");
+// console.log(passengerSeats);
+
+// seats.forEach(function (seat) {
+passengerSeats.forEach(function (seat) {
+  // console.log(seat.id);
+  document.getElementById(seat.id).addEventListener("click", (event) => {
     // console.log(seat);
     // console.log(event);
     // console.log(event.target);
@@ -77,53 +41,159 @@ seats.forEach(function (seat) {
       return;
     }
     if (totalBooking < 4) {
-      changeElementBg(seat);
+      // changeElementBg(seat);
+      changeElementBg(seat.id);
 
       const div = document.createElement("div");
       div.innerHTML = `
               <p class="seat-name"></p>
               <p>Economoy</p>
               <p>550</p>
+              <p id="delete" class="text-secondary text-lg font-medium cursor-pointer"><i class="fa-solid fa-trash"></i></p>
           `;
       //   console.log(div);
-      div.childNodes[1].innerText = seat;
+      // div.childNodes[1].innerText = seat;
+      div.setAttribute("id", "dookedSeat");
+      div.childNodes[1].innerText = seat.innerText;
       displayBookings.appendChild(div);
       totalBooking++;
+      // const deletebtns = document.querySelectorAll("#delete");
+      // console.log(deletebtns);
+
+      // const deleteBtn = document.getElementById("delete");
+      // console.log(deleteBtn);
+
+      // ///////////////////////// Delete BookedSeat related condes/////////////////////////////////
+      // // console.log(div.childNodes);
+      // // console.log(div.childNodes[7]);
+      // // console.log(div.childNodes[7].childNodes);
+      // // console.log(div.childNodes[7].childNodes[0]);
+      // const deleteBtn = div.childNodes[7].childNodes[0];
+      // deleteBtn.addEventListener("click", (e) => {
+      //   // console.log(e.target);
+      //   // console.log("clicked Delete BtN");
+      //   // console.log(e.target.parentNode);
+
+      //   // console.log(e.target.parentNode.closest("#dookedSeat"));
+      //   // const dleletedSeatNo =
+      //   //   e.target.parentNode.parentNode.childNodes[1].innerText;
+      //   // console.log(dleletedSeatNo);
+
+      //   // console.log(
+      //   //   document.getElementById(
+      //   //     e.target.parentNode.parentNode.childNodes[1].innerText
+      //   //   )
+      //   // );
+      //   // console.log(seat.innerText);
+      //   const deletedSeatNo = seat.innerText;
+      //   document
+      //     .getElementById(deletedSeatNo)
+      //     .classList.remove("bg-primary", "text-white");
+      //   const elementWillBeDelete = e.target.parentNode.closest("#dookedSeat");
+      //   // console.log(elementWillBeDelete);
+      //   elementWillBeDelete.remove();
+      //   totalBooking--;
+      //   console.log(totalBooking);
+      //   // totalSeats++;
+      //   // console.log(totalSeats);
+      // });
+      // ////////////////////////////////////////////////////////////////////////////////////////////////////////////
       //   console.log(totalBooking);
       totalBookingElement.innerText = totalBooking;
       seatsLeftElement.innerText = totalSeats - totalBooking;
       //////////////////////////////////////////////////////
       totalPriceElement.innerText = totalBooking * 550;
       grandTotalElement.innerText = totalBooking * 550;
-      if (totalBooking === 4) {
-        btnApply.removeAttribute("disabled");
-        btnApply.classList.remove("opacity-60", "cursor-not-allowed");
-        btnApply.addEventListener("click", function () {
-          //   console.log("clicked Apply");
-          const userCouponCode = couponInput.value;
-          //   console.log(userCouponCode);
-          if (userCouponCode === "NEW15") {
-            grandTotalElement.innerText =
-              totalBooking * 550 - totalBooking * 550 * 0.15;
-            couponField.classList.add("hidden");
-          } else if (userCouponCode === "Couple 20") {
-            grandTotalElement.innerText =
-              totalBooking * 550 - totalBooking * 550 * 0.2;
-            couponField.classList.add("hidden");
-          } else {
-            alert("Invalid Coupon!");
+      // console.log(totalBooking * 550);
+
+      ///////////////////////// Delete BookedSeat related codes/////////////////////////////////
+      // console.log(div.childNodes);
+      // console.log(div.childNodes[7]);
+      // console.log(div.childNodes[7].childNodes);
+      // console.log(div.childNodes[7].childNodes[0]);
+      const deleteBtn = div.childNodes[7].childNodes[0];
+
+      deleteBtn.addEventListener("click", (e) => {
+        if (
+          confirm(
+            `Are you sure you want to cancel the booking for seat ${seat.id}?`
+          )
+        ) {
+          // console.log(e.target);
+          // console.log("clicked Delete BtN");
+          // console.log(e.target.parentNode);
+
+          // console.log(e.target.parentNode.closest("#dookedSeat"));
+          // const dleletedSeatNo =
+          //   e.target.parentNode.parentNode.childNodes[1].innerText;
+          // console.log(dleletedSeatNo);
+
+          // console.log(
+          //   document.getElementById(
+          //     e.target.parentNode.parentNode.childNodes[1].innerText
+          //   )
+          // );
+          // console.log(seat.innerText);
+          const deletedSeatNo = seat.innerText;
+          document
+            .getElementById(deletedSeatNo)
+            .classList.remove("bg-primary", "text-white");
+          const elementWillBeDelete =
+            e.target.parentNode.closest("#dookedSeat");
+          // console.log(elementWillBeDelete);
+          elementWillBeDelete.remove();
+          totalBooking--;
+          // console.log(totalBooking);
+          totalBookingElement.innerText = totalBooking;
+          seatsLeftElement.innerText = totalSeats - totalBooking;
+          // totalSeats++;
+          // console.log(totalSeats);
+          totalPriceElement.innerText = totalBooking * 550 || "00.00";
+          grandTotalElement.innerText = totalBooking * 550 || "00.00";
+          // console.log(totalBooking * 550 || 0.0);
+          manageCouponApplyBtn();
+          if (totalBooking < 4) {
+            // console.log(couponInput);
             couponInput.value = "";
+            couponField.classList.remove("hidden");
           }
-        });
-      }
-      if (
-        totalBooking &&
-        document.getElementById("btn-next").hasAttribute("disabled")
-      ) {
-        document.getElementById("btn-next").removeAttribute("disabled");
-      }
+          manageNextBtn();
+        }
+      });
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      // if (totalBooking === 4) {
+      //   couponInput.removeAttribute("disabled");
+      //   // console.log(couponInput.hasAttribute("disabled"));
+      //   btnApply.removeAttribute("disabled");
+      //   btnApply.classList.remove("opacity-60", "cursor-not-allowed");
+      //   btnApply.addEventListener("click", function () {
+      //     //   console.log("clicked Apply");
+      //     const userCouponCode = couponInput.value;
+      //     //   console.log(userCouponCode);
+      //     if (userCouponCode === "NEW15") {
+      //       grandTotalElement.innerText =
+      //         totalBooking * 550 - totalBooking * 550 * 0.15 || "00.00";
+      //       couponField.classList.add("hidden");
+      //     } else if (userCouponCode === "Couple 20") {
+      //       grandTotalElement.innerText =
+      //         totalBooking * 550 - totalBooking * 550 * 0.2 || "00.00";
+      //       couponField.classList.add("hidden");
+      //     } else {
+      //       alert("Invalid Coupon!");
+      //       couponInput.value = "";
+      //     }
+      //   });
+      // }
+      manageCouponApplyBtn();
+      manageNextBtn();
+      // if (
+      //   totalBooking &&
+      //   document.getElementById("btn-next").hasAttribute("disabled")
+      // ) {
+      //   document.getElementById("btn-next").removeAttribute("disabled");
+      // }
     } else {
-      alert("You Can't Book More Then 4 seats.");
+      alert("You Can't Book More Then 4 seats!");
       return;
     }
   });
